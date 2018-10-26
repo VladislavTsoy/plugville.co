@@ -4,7 +4,8 @@ import React from 'react';
 // Required components
 import Navbar from './Navbar';
 import MainContainer from './MainContainer';
-import '../styles/style.css'
+import '../styles/style.css';
+
 
 const App = () => {
     return (
