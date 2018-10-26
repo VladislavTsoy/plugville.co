@@ -2,5 +2,19 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "proxima-nova";
 }
+
+.ad-container {
+    height: 7vh;
+    width: 100%;
+    background-color: red;
+}
+
+.main-content-container {
+    height: 86vh;
+    width: 100%;
+    max-width: 960px;
+}
+
 

@@ -10,6 +10,6 @@ import App from './components/App';
 
 ReactDOM.render(
     <BrowserRouter>
-        <App/>
+        <App />
     </BrowserRouter>
 , document.getElementById('root'));
