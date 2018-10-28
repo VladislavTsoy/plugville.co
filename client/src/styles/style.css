@@ -15,6 +15,7 @@ body {
     height: 86vh;
     width: 100%;
     max-width: 960px;
+    overflow: scroll;
 }
 
 

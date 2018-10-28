@@ -26,6 +26,10 @@ const eventSchema = new Schema({
     flyer: {
         type: String,
         required: true
+    },
+    priority: {
+        type: Number,
+        required: true
     }
 });
 
