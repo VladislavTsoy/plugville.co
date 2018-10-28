@@ -7,10 +7,13 @@ const eventSchema = new Schema({
         required: true
     },
     performers: {
-        type: [String]
+        type: String,
     },
     djs: {
-        type: [String],
+        type: String,
+    },
+    hosts: {
+        type: String,
     },
     date: {
         type: String,
@@ -18,7 +21,7 @@ const eventSchema = new Schema({
     },
     location: {
         type: String,
-        required
+        required: true
     },
     flyer: {
         type: String,
