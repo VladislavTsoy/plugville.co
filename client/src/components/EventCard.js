@@ -2,10 +2,11 @@ import React from 'react';
 
 const EventCard = props => {
     const style = {
-        width: props.width
+        width: props.width,
+        height: props.height
     }
     return (
-        <img src={props.flyer} alt={props.title} style={style}/>
+        <img className={props.className} src={props.flyer} alt={props.title} style={style}/>
     );
 };
 

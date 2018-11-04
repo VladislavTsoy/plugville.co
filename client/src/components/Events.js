@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import '../styles/events.css'
+import '../styles/events.css';
 
 // Required Componenets
 import Headline from './Headline';
+import EventCard from './EventCard';
 
 const Events = props => {
     return (
@@ -12,13 +13,13 @@ const Events = props => {
             <div className="events-container">
                 <div className="events-left">
                     {props.events.map((e, i) => {
-                        if(i % 2 === 0) return <img key={i} src={e.flyer} alt={e.title} style={{width: '100%'}}/>
+                        if(i % 2 === 0) return <EventCard key={i} {...e} alt={e.title} width={'100%'}/>
                         return <Fragment key={i}></Fragment>
                     })}
                 </div>
                 <div className="events-right">
                 {props.events.map((e, i) => {
-                        if(i % 2 === 1) return <img key={i} src={e.flyer} alt={e.title} style={{width: '100%'}}/>
+                        if(i % 2 === 1) return <EventCard key={i} {...e} alt={e.title} width={'100%'} />
                         return <Fragment key={i}></Fragment>
                     })}
                 </div>

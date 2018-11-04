@@ -17,7 +17,7 @@ class Home extends PureComponent {
                 <div className="slider">
                     {this.props.events.map((e, i) => {
                         if(i !== 0) {
-                            return <img key={i} className="slides" src={e.flyer} style={{height: '150px'}} alt="flyers"/>
+                            return <EventCard className="slides" key={i} {...e} alt={e.title} height={'150px'} />
                         }
                         return <Fragment key={i}></Fragment>
                     })}
