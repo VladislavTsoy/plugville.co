@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // Required Components
 import Headline from './Headline'
 
 const Vicario = () => {
     return (
-        <div>
+        <Fragment>
             <Headline />
             vicario page
-        </div>
+        </Fragment>
     );
 };
 

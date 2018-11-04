@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // Required Components
 import Headline from './Headline';
 
 const Agency = () => {
     return (
-        <div>
+        <Fragment>
             <Headline />
             agency page
-        </div>
+        </Fragment>
     );
 };
 

@@ -1,0 +1,17 @@
+.events-container {
+    display: flex;
+    width: 100%;
+}
+.events-left {
+    width: 50%;
+    /* background-color: blue; */
+    border-right: 5px solid white;
+    /* border-bottom: 15px solid white; */
+}
+
+.events-right {
+    width: 50%;
+    /* background-color: green; */
+    border-left: 5px solid white;
+    /* border-bottom: 15px solid white; */
+}

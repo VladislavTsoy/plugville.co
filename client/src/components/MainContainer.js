@@ -11,10 +11,10 @@ const MainContainer = () => {
     return (
         <div className="main-content-container">
             <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/events' component={Events} />
-                <Route path='/vicario' component={Vicario} />
-                <Route path='/agency' component={Agency} />
+                <Route exact path='/' component={ Home } />
+                <Route exact path='/events' component={ Events } />
+                <Route exact path='/vicario' component={ Vicario } />
+                <Route exact path='/agency' component={ Agency } />
             </Switch>
         </div>
     );

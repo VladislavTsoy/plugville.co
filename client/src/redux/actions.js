@@ -30,8 +30,7 @@ export const login = ({ username, password }) => {
             data: "Username and password required."
         };
     return dispatch => {
-        axios.post("/auth/login", { username, password})
-            .then(res => {
+        axios.post("/auth/login", { username, password}).then(res => {
                 dispatch({
                     type: "LOGIN_SUCCESSFUL",
                     data: res.data
@@ -50,8 +49,7 @@ export const signup = ({ username, password }) => {
         };
     };
     return dispatch => {
-        axios.post("/auth/signup", { username, password })
-            .then(res => {
+        axios.post("/auth/signup", { username, password }).then(res => {
                 init(dispatch);
                 dispatch({
                     type: "LOGIN_SUCCESSFUL",
@@ -69,22 +67,19 @@ export const logout = () => {
 };
 
 export const loadEvents = () => {
-    return dispatch => {
-        axios.get('/events')
-            .then(res => {
+    return dispatch => 
+        axios.get('/events').then(res => {
                 dispatch({
                     type: "LOAD_EVENTS",
-                    data: res.data
+                    data: res.data.sort((a, b) => a.priority - b.priority)
                 });
             })
             .catch(err => console.log(err));
-    };
 };
 
 export const selectedEvent = id => {
     return dispatch => 
-        axios.get(`/events/${id}`)
-            .then(res => 
+        axios.get(`/events/${id}`).then(res => 
                 dispatch({
                     type: "EVENT_SELECTED",
                     data: res.data
@@ -94,8 +89,7 @@ export const selectedEvent = id => {
 
 export const addEvent = obj => {
     return dispatch => 
-        authAxios.post("/api/events", obj)
-            .then(res => 
+        authAxios.post("/api/events", obj).then(res => 
                 dispatch({
                     type: "EVENT_ADDED",
                     data: res.data
@@ -105,8 +99,7 @@ export const addEvent = obj => {
 
 export const deleteEvent = id => {
     return dispatch => 
-        authAxios.delete(`/api/events/${id}`)
-            .then(res => 
+        authAxios.delete(`/api/events/${id}`).then(res => 
                 dispatch({
                     type: "EVENT_DELETED",
                     id
@@ -116,8 +109,7 @@ export const deleteEvent = id => {
 
 export const editEvent = (id, obj) => {
     return dispatch => 
-        authAxios.put(`/api/events/${id}`, obj)
-            .then(res => 
+        authAxios.put(`/api/events/${id}`, obj).then(res => 
                 dispatch({
                     type: "EVENT_UPDATED",
                     data: res.data

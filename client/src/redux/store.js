@@ -57,6 +57,8 @@ const loadEvents = (prev = [], action) => {
                 if(event._id === action.data._id) return action.data;
                 return event;
             });
+        case "LOGOUT_SUCCESSFUL":
+            return [];
         default:
             return prev;
     }
@@ -66,6 +68,8 @@ const selectedEvent = (prev = null, action) => {
     switch(action.type) {
         case "EVENT_SELECTED":
             return action.data;
+        case "LOGOUT_SUCCESSFUL":
+            return null;
         default:
             return prev
     }
