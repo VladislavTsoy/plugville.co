@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 // Required components
 import Navbar from './Navbar';
 import MainContainer from './MainContainer';
-import Ad from './Ad'
+// import Ad from '../shared/Ad'
 import '../styles/style.css';
 
 
@@ -20,7 +20,6 @@ class App extends PureComponent {
     render(){
         return (
             <div className="app-container">
-                <Ad />
                 <MainContainer />
                 <Navbar />
             </div>

@@ -4,20 +4,19 @@ import '../styles/style.css';
 import '../styles/home.css';
 
 // Required Components
-import Headline from './Headline';
-import EventCard from './EventCard';
+import Headline from '../shared/Headline';
+import EventCard from '../shared/EventCard';
 
 class Home extends PureComponent {
     render(){
         return (
             <Fragment>
                 <Headline />
-                {this.props.events && <EventCard width="100%" {...this.props.events[0]} />}
-                
+                {this.props.events && <EventCard width="100%" {...this.props.events[0]} active={false}/>}
                 <div className="slider">
                     {this.props.events.map((e, i) => {
                         if(i !== 0) {
-                            return <EventCard className="slides" key={i} {...e} alt={e.title} height={'150px'} />
+                            return <EventCard className="slides" key={i} {...e} alt={e.title} height={'150px'} active={false}/>
                         }
                         return <Fragment key={i}></Fragment>
                     })}

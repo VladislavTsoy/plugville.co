@@ -6,6 +6,7 @@ body {
 }
 
 .ad-container {
+    position: static;
     height: 7vh;
     width: 100%;
     background-color: red;

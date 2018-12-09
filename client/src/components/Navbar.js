@@ -3,7 +3,8 @@ import React, { PureComponent, Fragment } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
-import { CSSTransition } from 'react-css-transition';
+import { CSSTransition } from 'react-transition-group';
+
 import '../styles/navbar.css';
 
 // Required components
@@ -18,7 +19,6 @@ class Navbar extends PureComponent {
     };
 
     handleToggle = () => {
-        console.log(this.state);
         this.setState({toggle: !this.state.toggle});
     };
 
@@ -36,9 +36,13 @@ class Navbar extends PureComponent {
                         </IconButton>
                     </ul>
                 </div>
-                <CSSTransition active={this.state.toggle}>
-                    {this.state.toggle && <FullNav handleToggle={this.handleToggle}/>}
-                </CSSTransition>
+                {/* <CSSTransition active={this.state.toggle}> */}
+                    {this.state.toggle && 
+                    <CSSTransition in={this.state.toggle} appear={true} timeout={300} classNames="message">
+                        <FullNav handleToggle={this.handleToggle}/>
+                    </CSSTransition>
+                    }
+                {/* </CSSTransition> */}
             </Fragment>
         );
     }

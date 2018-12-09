@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 // Required Components
-import Headline from './Headline';
+import Headline from '../shared/Headline';
 
 const Agency = () => {
     return (

@@ -44,22 +44,203 @@
     top: 0;
     left: 0;
     background-color: #fff;
+    z-index: 15;
 }
 
-.defaultClassName {
-    transform: translate(0, 0),
+
+/* .message-enter {
+    opacity: 0.01;
+    transform: scale(0.9) translateY(50%);
+}
+.message-enter-active {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+    transition: all 300ms ease-out;
+} */
+
+.message-appear {
+    position: absolute;
+    top: 100%;
+    z-index: 15;
 }
 
-.enterClassName {
-    transform: translate(200px, 0);
-    transition: transform 500ms ease-in-out;
+.message-appear.message-appear-active {
+    top: 0;
+    opacity: 1;
+    z-index: 15;
+    transition: top 150ms linear
 }
 
-.leaveClassName {
-    transform: translate(0, 0);
-    transition: transform 500ms ease-in-out,
+.full-nav-links {
+    margin: 0;
+    padding: 30px 0 0 0;
+    display: flex;
+    height: 55vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+    text-transform: none;
 }
 
-.activeClassName {
-    transform: translate(200px, 0),
+.full-nav-links-child:first-child{
+    padding: 0;
+    align-self: center;
+}
+
+.full-nav-links-child {
+    padding-left: 60px;
+}
+
+.full-nav-links > li {
+    text-transform: uppercase;
+}
+
+.full-nav-links li > a {
+    text-decoration: none;
+    list-style: none;
+    color: rgba(97, 97, 97, 0.781);
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: space-around;
+    width: 45vw;
+}
+
+.social-links-container img {
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+    filter: invert(.3)
+}
+
+/****-----****/
+/* subscribe */
+
+.main-subscribe {
+    margin-top: 40px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-subscribe input {
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid grey;
+    border-right: none;
+    color: grey;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: proxima-nova, "futura";
+    width: 150px;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input#mce-EMAIL.required.email {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.btn-subscribe {
+    vertical-align: top;
+    width: 80px;
+    color: rgb(70,70,70);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(70, 70, 70);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .3s;
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:active {
+    background-color: rgb(226, 226, 226);
+}
+
+#onSub {
+    width: 0;
+    opacity: 0;
+    font-size: 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: opacity .5s ease-in;
+}
+
+/*----- end of subscribe -----*/
+
+.close-full-nav {
+    float: right;
+    margin-right: 30px;
+    filter: invert(.4);
+}
+
+/*----- Footer -----*/
+
+.full-nav-footer {
+    height: 30vh;
+    background-color: rgb(32,32,34);
+}
+
+.footer-links {
+    color: rgb(112, 112, 115);
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links h4 {
+    padding: 2px;
+    margin: 0;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: 75px;
+}
+
+.copyright-footline {
+    color: rgb(112, 112, 115);
+    background-color: rgb(42,43,45);
+    height: 6vh;
+    display: flex;
+    position: relative;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
 }
